@@ -1,0 +1,34 @@
+a= "priya is so smart"  #checking purpose
+print("so" in a)
+o/p:
+True
+
+
+a= "priya is so smart"
+print("breayytkc" in a)
+o/p:
+False
+
+
+a= "priya is so smart"
+print("breayytkc"  not in a)
+o/p:
+True
+
+
+a= "priya is so smart"
+if "babaji" not in a:
+    print("not present")
+else:
+    print("its present")
+o/p:
+not present
+
+
+#slicing:
+a="priya"
+print(a[0:3])
+o/p:
+pri
+
+
