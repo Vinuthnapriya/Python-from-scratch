@@ -32,3 +32,29 @@ o/p:
 pri
 
 
+SETS:
+
+Sets are used to store multiple items in a single variable.
+A set is a collection which is unordered, unchangeable*, and unindexed.
+Set items are unchangeable, but you can remove items and add new items
+Sets are written with curly brackets.
+Set items are unordered, unchangeable, and do not allow duplicate values.
+The values True and 1 are considered the same value in sets, and are treated as duplicates
+The values False and 0 are considered the same value in sets, and are treated as duplicates
+A set can contain different data types
+It is also possible to use the set() constructor to make a set
+Once a set is created, you cannot change its items, but you can add new items.
+
+
+
+
+Python Collections (Arrays)
+There are four collection data types in the Python programming language:
+
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+
+
