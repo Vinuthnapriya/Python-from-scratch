@@ -15,3 +15,190 @@ print("Python","Programming")
 
 o/p:
 Python Programming
+
+
+
+print("Priya is \"smart\"")
+o/p:
+Priya is "smart"
+
+
+
+v=1
+v2=3
+print(v2 >= v)
+print(type(v2 >= v))
+o/p:
+True
+<class 'bool'>
+
+
+
+len() function is only applicable to strings.
+eg: print(len("priya"))
+o/p:
+5
+eg: print(len(1234))
+type error
+eg: print(len("12345"))
+o/p:
+5
+
+
+* + - [L-R}
+% - gives remainder[R-L]
+// - gives quotient[R-L]
+/ - always gives a float type of an output[R-L]
+** - gives power^ [L - R}
+operator precedence follows BODMAS rule (^ * /  // % + -)
+
+
+
+bitwise operator:
+^ XNOR
+<< LEFT SHIFT
+>> RIGHT SHIFT
+& AND
+| OR
+~ NOT
+
+
+in AND (& )bitwise if both are 1, then only it will give 1
+            if 1,0, then we get 0
+-> in left shift we will always gain bits not discard anything.
+#left shift <<
+a=5
+print(a<<2)
+# logic: x * 2^n
+
+
+-> in right shift we will always lose bits, its gonna get discarded
+#right shift >>
+a=5
+print(a>>2)
+#logic: x/2^n
+
+
+bitwise operations
+a,b=5,4
+print(a&b)
+print(a|b)
+print(~a)
+print(~b)
+print(a<<2)
+print(a>>2)
+print(a^b)
+
+o/p:
+4
+5
+-6
+-5
+20
+1
+1
+
+
+#identity operators
+1. is 
+2. is not
+
+#indentity operation
+a,b=4,4
+print(a is b)
+a,b=2,4
+print(a is not b)
+print(a is b)
+
+o/p:
+True
+True
+False
+
+
+#equility operator (==) and identity operator are not same
+
+
+#using id function to return memory addresses of a container
+a=4
+print(id(a))
+print(id(4))
+o/p:
+140728026008088
+140728026008088
+
+a,b=5,5
+print(id(b))
+print(id(a))
+o/p:
+140728026008120
+140728026008120
+-> if the datatypes of the variables are same then it returns true , otherwise false for identity operation.
+a,a=5,8
+print(id(a))
+print(id(a))
+print(a is a)
+o/p:
+140728465164952
+140728465164952
+True
+
+
+#membership operator:
+1. in
+2. not in
+
+str="Jenny"
+print("y" in  str)
+print("k" in str)
+print("T" not in str)
+o/p:
+True
+False
+True
+k=[1,4,6,8,9]
+print(4 in k)
+o/p:
+True
+
+
+
+#round() function:
+-> round(number,no. of digits)
+eg:
+#calculate BMI , formula= weight/(height**2) by using round() function
+weight=int(input(f"enter your weight in kgs:  "))
+height=float(input(f"enter your height in m:  "))
+bmi=float(weight/(height*height))
+print((bmi))
+print(round(bmi,2))
+
+o/p:
+enter your weight in kgs:  55
+enter your height in m:  1.7
+19.031141868512112
+19.03
+-> if decimal point on the LHS is above 5, then the value will increment otherwise it doesnt.
+eg:
+print(round(2.456656565,2))
+print(round(2.65656565))
+o/p:
+2.46
+3
+
+print(round(674,-1))
+o/p:
+670
+logic: 10^(- no. of digits)
+so in the above example:   10^-(-1)=>10^1=>10
+
+
+
+#f-strings
+name="Priya"
+age=20
+print(f"hi, i am {name} and i am {age} years old")
+o/p:
+hi, i am Priya and i am 20 years old
+
+
