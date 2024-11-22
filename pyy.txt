@@ -1,0 +1,115 @@
+LAB PROGRAM 7 PYTHON:
+
+program1:
+
+class employee:
+    def __init__(self, eid, ename, sal, allowance, tax):  # corrected the constructor name
+        self.eid = eid
+        self.ename = ename
+        self.sal = sal
+        self.allowance = allowance
+        self.tax = tax
+        self.asal = 0  # initialize annual salary
+
+    def Asal(self):
+        # Corrected the formula for annual salary calculation
+        self.asal = (self.sal + self.allowance) - (self.allowance * self.tax / 100)
+
+    def Display(self):
+        print(f"Annual salary of Employee with id: {self.eid} is: {self.asal}")
+
+
+# Object 1
+e1 = employee(7000, "abc", 70000, 10000, 15)
+e1.Asal()
+e1.Display()
+
+# Object 2
+e2 = employee(6000, "cha", 30000, 2500, 8)
+e2.Asal()
+e2.Display()
+
+o/p:
+Annual salary of Employee with id: 7000 is: 78500.0
+Annual salary of Employee with id: 6000 is: 32300.0
+
+
+program 2:
+
+
+#lets create a parent calss
+class person:
+    def __init__(self, name, age, occupation, dob):
+        self.name = name
+        self.age = age
+        self.occupation = occupation
+        self.dob = dob
+        
+    def display(self):
+        print("Name: ", self.name)
+        print("Age: ", self.age)
+        print("Occupation: ", self.occupation)
+        print("DOB: ", self.dob)
+        
+#single level inheritence
+class Student(person):
+    def Classin(self, section, year):
+        self.year = year
+        self.section = section
+        print("Year and Section= ",self.year, self.section)
+        
+    def Performance(self, gpa):
+        self.gpa = gpa
+        print("Student gpa is: ",self.gpa)
+        
+#creation of object
+std1 = Student('Yuki', 25, 'studying', 1997)
+std1.display()
+std1.Classin("AIDS",2)
+std1.Performance("8.6")
+
+o/p:
+Name:  Yuki
+Age:  25
+Occupation:  studying
+DOB:  1997
+Year and Section=  2 AIDS
+Student gpa is:  8.6
+
+
+program3:
+
+#multiple level inheritence
+class person:
+    def __init__(self, name, age, occupation, dob):
+        self.name = name
+        self.age = age
+        self.occupation = occupation
+        self.dob = dob
+        
+    def display(self):
+        print("Name: ", self.name)
+        print("Age: ", self.age)
+        print("Occupation: ", self.occupation)
+        print("DOB: ", self.dob)
+        
+class Male:
+    def display1(self):
+        print("This statement belongs to class MALE\n")
+class student(person, Male):
+    def display(self):
+        print("This is an example of multi level inheritence")
+        
+#creation of object
+std2 = student('Yuvi', 20, 'Entrepreneur', 2000)
+std2.display()
+std2.display1()
+
+o/p:
+This is an example of multi level inheritence
+This statement belongs to class MALE
+
+
+
+
+
