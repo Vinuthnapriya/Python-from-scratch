@@ -1,0 +1,27 @@
+
+class employee:
+    def __init__(self, eid, ename, sal, allowance, tax):  # corrected the constructor name
+        self.eid = eid
+        self.ename = ename
+        self.sal = sal
+        self.allowance = allowance
+        self.tax = tax
+        self.asal = 0  # initialize annual salary
+
+    def Asal(self):
+        # Corrected the formula for annual salary calculation
+        self.asal = (self.sal + self.allowance) - (self.allowance * self.tax / 100)
+
+    def Display(self):
+        print(f"Annual salary of Employee with id: {self.eid} is: {self.asal}")
+
+
+# Object 1
+e1 = employee(7000, "abc", 70000, 10000, 15)
+e1.Asal()
+e1.Display()
+
+# Object 2
+e2 = employee(6000, "cha", 30000, 2500, 8)
+e2.Asal()
+e2.Display()
